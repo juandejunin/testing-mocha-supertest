@@ -80,7 +80,7 @@ module.exports = userRouter
 ## Al archivo app.js agragar las dos lineas de codigo siguientes:
 
 ```
-app.use(express.json)
+app.use(express.json())
 app.use('/users', require('./routes/userRoutes'))
 ```
 
@@ -96,9 +96,3 @@ app.use('/users', require('./routes/userRoutes'))
 app.listen(3000)
 console.log('Server on port 3000')
 ```
-
-## Testing
-
- npm i mocha supertest
-
- 
