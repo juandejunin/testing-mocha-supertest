@@ -80,7 +80,7 @@ module.exports = userRouter
 ## Al archivo app.js agragar las dos lineas de codigo siguientes:
 
 ```
-app.use(express.json)
+app.use(express.json())
 app.use('/users', require('./routes/userRoutes'))
 ```
 
