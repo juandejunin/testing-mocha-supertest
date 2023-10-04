@@ -96,3 +96,9 @@ app.use('/users', require('./routes/userRoutes'))
 app.listen(3000)
 console.log('Server on port 3000')
 ```
+
+## Testing
+
+ npm i mocha supertest
+
+ 

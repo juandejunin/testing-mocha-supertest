@@ -6,7 +6,7 @@ const userRouter = Router()
  */
 
 userRouter.get('/', (req,res) => {
-    return res.json('all users sent')
+    return res.json({ message: 'All users sent' }); // Cambio aquí
 })
 
 /**
@@ -14,10 +14,10 @@ userRouter.get('/', (req,res) => {
  */
 
 userRouter.get('/:id', (req,res) => {
-    if(req.params.id === "u0001"){
+    if(req.params.id === "U0001"){
         return res.json('user found')
     }
-   return res.status(400).json('user not found')
+   return res.status(404).json("user not found")
 })
 
 /**
@@ -26,9 +26,9 @@ userRouter.get('/:id', (req,res) => {
 userRouter.post('/', (req,res)=> {
     const {username, password} = req.body
     if(username && password){
-        return res.status(201).json('User created')
+        return res.status(201).json("user created");
     }
-    res.json(400).json('user not created')
+    res.status(400).json("user not created");
 })
 
 module.exports = userRouter
