@@ -48,7 +48,7 @@ describe("GET /users", () => {
   describe("POST /users", () => {
     it("respond with 201 created", (done) => {
       const data = {
-        username: "fazt",
+        username: "jhony",
         password: "password123",
       };
       request(app)
